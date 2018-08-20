@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EDITOR</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'ide/styl.css' %}">
+</head>
+<body>
+
+<form method="post" action="{% url 'process' %}" target="_blank">
+    {% csrf_token %}
+    <h1> Source Code:</h1>
+
+    <textarea name="sourcecode" rows="30" cols="100">write your code here</textarea><br>
+
+    <h2>Select your Language</h2>
+    <Select name="lang">
+	<option value="4">C (gcc 7.2.0)</option>
+	<option value="10">C++ (g++ 7.2.0)</option>
+	<option value="27">Java (OpenJDK 8)</option>
+    <option value="35">Python (3.5.3)</option>
+
+	</select>
+
+<br><br>
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
