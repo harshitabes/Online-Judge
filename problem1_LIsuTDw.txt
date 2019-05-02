@@ -1,0 +1,1 @@
+problem-wap to find lcm of and b.

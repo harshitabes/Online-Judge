@@ -3,15 +3,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>EDITOR</title>
+    <title>{{ data }}</title>
     <link rel="stylesheet" type="text/css" href="{% static 'ide/styl.css' %}">
 </head>
 <body>
-
-<form method="post" action="{% url 'process' %}" target="_blank">
+{{ data }}
+<form method="post" action="{{ data }}"  target="_blank">
     {% csrf_token %}
     <h1> Source Code:</h1>
-
+    {{ data }}
     <textarea name="sourcecode" rows="30" cols="100">write your code here</textarea><br>
 
     <h2>Select your Language</h2>
@@ -23,7 +23,12 @@
 
 	</select>
 
-<br><br>
+<br>
+    <input type="file" name="codefile" >
+
+    <br>
+
+
     <input type="submit" value="Submit">
 </form>
 

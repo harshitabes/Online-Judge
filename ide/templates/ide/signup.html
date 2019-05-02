@@ -1,0 +1,36 @@
+{% load static %}
+
+<html>
+<head>
+<title>SignUp</title>
+<link rel="stylesheet" type="text/css" href="{% static 'ide/styl.css' %}">
+
+<body>
+<div class="head">
+<h1>Registration Form</h1>
+</div>
+
+	<div class="forms">
+	<form method="POST" action="{% url 'Signup' %}" target="_self">
+        {% csrf_token %}
+	username:
+	<input type="text" name="username">
+	<br>
+	<br>
+	password:
+        <input type="password" name="password">
+        <br>
+        <br>
+    email:
+        <input type="email" name="mail">
+        <br>
+        <br>
+
+	<input type="submit" value="Sign Up">
+	</form>
+	</div>
+</body>
+</head>
+</html>
+
+

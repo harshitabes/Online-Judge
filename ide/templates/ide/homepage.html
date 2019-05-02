@@ -1,24 +1,45 @@
 {% load static %}
 
-<!DOCTYPE html>
-<head lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>codeplatform</title>
-<link rel="stylesheet" type="text/css" href="{% static 'ide/styl.css' %}"
+<title>CodePlatform</title>
+<link rel="stylesheet" type="text/css" href="{% static 'ide/styl.css' %}">
 
 <body>
-<h1>
-    Problem Statement:
-</h1><br>
-<h3> {% for i in data %}
-      {{ i.statement }}
-    <a href="{% url 'submit' %}"><h2>Solve</h2></a>
-    {% endfor %}
 
-</h3>
+<h2><a href="{% url 'Signup' %}">SignUp</a></h2>
+<div class="head">
+    {% if user.is_authenticated %}
+  Hi {{ user.username }}!
+  <p ><a href="{% url 'logoutview' %}">logout</a></p>
+{% else %}
+
+        <h2 ><p>Please login to View Problem </p></h2>
+<h1>Login Form</h1>
+</div>
 
 
+
+	<div class="forms">
+	<form method="POST" action="{% url 'loginview' %}" target="_self" >
+        {% csrf_token %}
+	username:
+	<input type="text" name="username" >
+	<br>
+	<br>
+	password:
+        <input type="password" name="password" >
+        <br>
+        <br>
+
+
+
+	<input type="submit" value="Sign In" >
+	</form>
+	</div>
+{% endif %}
 </body>
 </head>
 </html>
+
+

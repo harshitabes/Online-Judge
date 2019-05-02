@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<head lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>codeplatform</title>
+<link rel="stylesheet" type="text/css" href="{% static 'ide/styl.css' %}"
+
+<body>
+Hi {{ user.username }}!
+
+<h1>
+    Contest :
+</h1><br>
+{% csrf_token %}
+<h3> {% for i in data %}
+    <br>
+    <a href="http://127.0.0.1:8000{{ i.statement.url }}"><h2>{{ i.title}}</h2></a>
+
+
+    <a href="/submit/{{ i.pk }}/" class="btn btn-primary" role="button"><h2>Solve</h2></a>
+    {% endfor %}
+
+</h3>
+
+
+</body>
+</head>
+</html>

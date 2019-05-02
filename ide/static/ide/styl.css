@@ -1,10 +1,79 @@
-textarea {
-	width: 800px;
-	height: 400px;
-	border: 3px solid #cccccc;
-	border-radius: 15px;
-	border-color: blueviolet;
-	padding: 5px;
-	font-family: Tahoma, sans-serif;
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+	font-family:Verdana;
+}
+
+input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+	font-family:Verdana;
+}
+
+input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+	font-family:Verdana;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: blue;
+    color: red;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: Apple Chancery, cursive;
+    -ms-text-size-adjust: initial;
+
+}
+
+input[type=submit]:hover {
+    background-color: green;
+
+}
+
+div {
+    border-radius: 5px;
+
+    padding: 20px;
+}
+
+body {
+
+    background-image: url("https://www.bing.com/images/search?view=detailV2&ccid=RDeoEgC2&id=5E5587990C8B0BB8B0AB11864BF9679A957D6908&thid=OIP.RDeoEgC294VVyHJ6_ZRPiAAAAA&mediaurl=http%3a%2f%2fmedia2.intoday.in%2findiatoday%2fimages%2fstories%2f305_050517044002.jpg&exph=182&expw=305&q=images+of+codechef&simid=608011112360707474&selectedIndex=174&ajaxhist=0");
+}
+
+h2{
+text-align:center;
+    color:red;
+    font-family: Apple Chancery, cursive;
+    -moz-text-size-adjust: auto;
+    background-attachment: border-bottom-color: transparent;;
+
+}
+
+.head,body{
+    background-image: url("http://shekinahhouse.co.za/wp-content/uploads/2015/01/colors-15646704.jpg");
+    color:violet;
+    font-family:  Apple Chancery, cursive;
+
 
 }
